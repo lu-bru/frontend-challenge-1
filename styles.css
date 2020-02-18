@@ -1,0 +1,338 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #f4effc;
+}
+
+.header {
+  background-color: #67568c;
+  padding: 6%;
+}
+
+@media only screen and (min-width: 568px) and (max-width: 850px) and (orientation: landscape) {
+  .header {
+    padding: 3%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    padding: 3%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .header {
+    padding: 1.5%;
+  }
+}
+
+.header__title {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: end;
+}
+
+main {
+  padding: 0 10%;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    padding: 0 5%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  main {
+    padding: 0 15%;
+  }
+}
+
+.top {
+  margin: 20% 0;
+}
+
+@media only screen and (min-width: 568px) and (max-width: 850px) and (orientation: landscape) {
+  .top {
+    margin: 10% 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .top {
+    margin: 5% 0;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .top {
+    margin: 4% 0;
+  }
+}
+
+.top__title {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  color: #1f1235;
+}
+
+@media only screen and (min-width: 768px) {
+  .top__title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+  }
+}
+
+.top__instructions {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #67568c;
+  font-style: italic;
+  margin: 5% 0 0 0;
+}
+
+@media only screen and (min-width: 568px) and (max-width: 850px) and (orientation: landscape) {
+  .top__instructions {
+    margin: 3% 0 0 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .top__instructions {
+    margin: 2% 0 0 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .top__instructions {
+    margin: 1% 0 0 0;
+  }
+}
+
+.container-elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  .container-elements {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5em;
+    grid-auto-rows: 1fr;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container-elements {
+    grid-gap: 2em;
+    grid-auto-rows: auto;
+  }
+}
+
+.container-elements .element {
+  border-radius: 3px;
+  margin: 0 0 10% 0;
+  padding: 10%;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+@media only screen and (min-width: 568px) and (max-width: 850px) and (orientation: landscape) {
+  .container-elements .element {
+    margin: 0 0 5% 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container-elements .element {
+    padding: 8%;
+    margin: 0;
+  }
+}
+
+.container-elements .element__title-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .container-elements .element__title-img {
+    margin: 0 0 20px 0;
+  }
+}
+
+.container-elements .element__icon {
+  background-image: url(./img/sprites.png);
+  height: 70px;
+  width: 70px;
+  margin: 0 20px 0 0;
+}
+
+.container-elements .element__title {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .container-elements .element__title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+  }
+}
+
+.container-elements .element__description {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .container-elements .element__description {
+    display: block;
+  }
+}
+
+.button {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  width: 100%;
+  margin: 0 0 10% 0;
+  padding: 5%;
+  border-radius: 3px;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+@media only screen and (min-width: 768px) {
+  .button {
+    margin: 1.5em 0 10% 0;
+    padding: 3%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .button {
+    padding: 2%;
+    margin: 2em 0 5% 0;
+  }
+}
+
+.element-neutral {
+  background-color: #e2daeb;
+  color: #1f1235;
+  cursor: pointer;
+}
+
+.element-neutral:hover {
+  -webkit-box-shadow: 0 4px 12px rgba(31, 18, 53, 0.3);
+          box-shadow: 0 4px 12px rgba(31, 18, 53, 0.3);
+}
+
+.element-selected {
+  background-color: #67568c;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.element-selected-disabled {
+  background-color: #67568c;
+  color: #ffffff;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.element-not-selected {
+  background-color: #e2daeb;
+  color: #1f1235;
+  cursor: pointer;
+}
+
+.element-not-selected:hover {
+  -webkit-box-shadow: 0 4px 12px rgba(31, 18, 53, 0.3);
+          box-shadow: 0 4px 12px rgba(31, 18, 53, 0.3);
+}
+
+.element-not-selected-disabled {
+  background-color: #e2daeb;
+  color: #1f1235;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.icon-neutral {
+  background-position: -5px -5px;
+}
+
+.icon-selected {
+  background-position: -245px -5px;
+}
+
+.icon-selected-disabled {
+  background-position: -325px -5px;
+}
+
+.icon-not-selected {
+  background-position: -85px -5px;
+}
+
+.icon-not-selected-disabled {
+  background-position: -165px -5px;
+}
+
+.button-disabled {
+  color: #1f1235;
+  background-color: #ffffff;
+  opacity: 0.4;
+}
+
+.button-activated {
+  color: #1f1235;
+  background-color: #ff6e6c;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+}
+
+.button-activated:hover {
+  -webkit-box-shadow: 0 4px 12px rgba(31, 18, 53, 0.3);
+          box-shadow: 0 4px 12px rgba(31, 18, 53, 0.3);
+  top: -5px;
+}
+
+.button-sent {
+  background-color: #e2daeb;
+  opacity: 0.4;
+  position: relative;
+  top: 0;
+}
+/*# sourceMappingURL=styles.css.map */

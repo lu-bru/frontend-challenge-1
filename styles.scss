@@ -1,0 +1,273 @@
+@mixin Nunito($weight, $size) {
+    font-family: 'Nunito', sans-serif;
+    font-weight: $weight;
+    font-size: $size;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #f4effc;
+}
+
+.header {
+    background-color: #67568c;
+    padding: 6%;
+
+    @media only screen and (min-width: 568px) and (max-width: 850px) and (orientation: landscape) /* phone landscape */ {
+        padding: 3%;
+    }
+
+    @media only screen and (min-width: 768px) /* tablet */ {
+        padding: 3%;
+    }
+
+    @media only screen and (min-width: 1200px) /* desktop */ {
+        padding: 1.5%;
+    }
+
+    &__title {
+        @include Nunito(700, 16px);
+        color: #ffffff;
+        text-transform: uppercase;
+        text-align: end;
+    }
+}
+
+main {
+    padding: 0 10%;
+
+    @media only screen and (min-width: 768px) /* tablet */ {
+        padding: 0 5%;
+    }
+
+    @media only screen and (min-width: 1200px) /* desktop */ {
+        padding: 0 15%;
+    }
+}
+
+.top {
+    margin: 20% 0;
+
+    @media only screen and (min-width: 568px) and (max-width: 850px) and (orientation: landscape) /* phone landscape */ {
+        margin: 10% 0;
+    }
+
+    @media only screen and (min-width: 768px) /* tablet  */ {
+        margin: 5% 0;
+        text-align: center;
+    }
+
+    @media only screen and (min-width: 1200px) /* desktop */ {
+        margin: 4% 0;
+    }
+
+    &__title {
+        @include Nunito(700, 38px);
+        color: #1f1235;
+
+        @media only screen and (min-width: 768px) /* tablet */ {
+            @include Nunito(700, 48px);
+        }
+    }
+
+    &__instructions {
+        @include Nunito(300, 18px);
+        color: #67568c;
+        font-style: italic;
+        margin: 5% 0 0 0;
+
+        @media only screen and (min-width: 568px) and (max-width: 850px) and (orientation: landscape) /* phone landscape */ {
+            margin: 3% 0 0 0;
+        }
+
+        @media only screen and (min-width: 768px) /* tablet */ {
+            margin: 2% 0 0 0;
+        }
+
+        @media only screen and (min-width: 1200px) /* desktop */ {
+            margin: 1% 0 0 0;
+        }
+    }
+}
+
+.container-elements {
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (min-width: 768px) /* tablet */ {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1.5em;
+        grid-auto-rows: 1fr
+    }
+
+    @media only screen and (min-width: 1200px) /* desktop */ {
+        grid-gap: 2em;
+        grid-auto-rows: auto;
+    }
+    
+    .element {
+        border-radius: 3px;
+        margin: 0 0 10% 0;
+        padding: 10%;
+        transition: all .2s ease-in;
+        
+        @media only screen and (min-width: 568px) and (max-width: 850px) and (orientation: landscape) /* phone landscape */ {
+            margin: 0 0 5% 0;
+        }
+
+        @media only screen and (min-width: 768px) /* tablet */ {
+            padding: 8%;
+            margin: 0;            
+        }
+
+        &__title-img {
+            display: flex;
+            align-items: center;
+
+            @media only screen and (min-width: 768px) /* tablet */ {
+                margin: 0 0 20px 0;
+            }
+        }
+
+        &__icon {
+            background-image: url(./img/sprites.png);
+            height: 70px;
+            width: 70px;
+            margin: 0 20px 0 0;
+        }
+
+        &__title {
+            @include Nunito(700, 25px);
+
+            @media only screen and (min-width: 1200px) /* desktop */ {
+                @include Nunito(700, 36px);
+            }
+        }
+
+        &__description {
+            @include Nunito(400, 18px);
+            display: none;
+
+            @media only screen and (min-width: 768px) /* tablet */ {
+                display: block;
+            }
+        }
+    }
+}
+
+.button {
+    @include Nunito(700, 18px);
+    border: none;
+    width: 100%;
+    margin: 0 0 10% 0;
+    padding: 5%;
+    border-radius: 3px;
+    transition: all .2s ease-in;
+    
+    @media only screen and (min-width: 768px) /* tablet */ {
+        margin: 1.5em 0 10% 0;
+        padding: 3%;
+    }
+
+    @media only screen and (min-width: 1200px) /* desktop */ {
+        padding: 2%;
+        margin: 2em 0 5% 0;
+    }
+}
+
+//states
+
+//element
+.element-neutral {
+    background-color: #e2daeb;
+    color: #1f1235;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 4px 12px rgba(31, 18, 53, 0.3),
+    }
+}
+
+.element-selected {
+    background-color: #67568c;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.element-selected-disabled {
+    background-color: #67568c;
+    color: #ffffff;
+    cursor: auto;
+    pointer-events: none;
+}
+
+.element-not-selected {
+    background-color: #e2daeb;
+    color: #1f1235;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 4px 12px rgba(31, 18, 53, 0.3),
+    }
+}
+
+.element-not-selected-disabled {
+    background-color: #e2daeb;
+    color: #1f1235;
+    cursor: auto;
+    pointer-events: none;
+}
+
+//icon
+.icon-neutral {
+    background-position: -5px -5px;
+}
+
+.icon-selected {
+    background-position: -245px -5px;
+}
+
+.icon-selected-disabled {
+    background-position: -325px -5px;
+}
+
+.icon-not-selected {
+    background-position: -85px -5px;
+}
+
+.icon-not-selected-disabled {
+    background-position: -165px -5px;
+}
+
+//button
+.button-disabled {
+    color: #1f1235;
+    background-color: #ffffff;
+    opacity: 0.4;
+}
+
+.button-activated {
+    color: #1f1235;
+    background-color: #ff6e6c;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    &:hover {
+        box-shadow: 0 4px 12px rgba(31, 18, 53, 0.3);
+        top: -5px;
+    }
+}
+
+.button-sent {
+    background-color:  #e2daeb ;
+    opacity: 0.4;
+    position: relative;
+    top: 0;
+}
+
